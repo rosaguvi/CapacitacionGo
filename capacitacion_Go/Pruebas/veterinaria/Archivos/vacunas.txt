@@ -1,0 +1,3 @@
+ID, nombre, tipo de mascota, edad mínima (años), CC por Kg
+1, vacuna 1, perro, 1.5, 2.3
+2, vacuna 2, gato, 2, 1.5

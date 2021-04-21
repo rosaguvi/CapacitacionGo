@@ -1,0 +1,42 @@
+Carros
+BMW,  Serie 3, 2012, 30000, 4, Blanco, automatico
+Ford, Mustang,  2019, 80000, 2, Rojo, manual
+Audi, A4,  2018, 40000, 4, Negro, automatico
+Audi, A6,  2010, 35000, 4, Negro, automatico
+Audi, A3,  2017, 55000, 2, Negro, manual
+BMW, Serie 5,  2016, 70000, 4, Rojo, automatico
+Ford, Mustang,  2015, 20000, 2, Blanco, automatico
+Mercedes Benz, Clase C,  2018, 45000, 4, Azul, automatico
+Chevrolet, Camaro,  2018, 60000, 2, Rojo, manual
+Dodge, Challenger,  2012, 25000, 2, Rojo, manual
+BMW, Serie 5,  2019, 90000, 4, Blanco, automatico
+Ford, Mustang,  2017, 60000, 2, Negro, manual
+Mercedes Benz, Clase C,  2018, 45000, 4, Azul, automatico
+Mercedes Benz, Clase C,  2015, 25000, 4, Blanco, automatico
+BMW, Serie 5,  2019, 90000, 4, Blanco, automatico
+Dodge, Challenger,  2012, 25000, 2, Rojo, manual
+Ford, Mustang,  2017, 60000, 2, Negro, manual
+Mercedes Benz, Clase C,  2015, 25000, 4, Blanco, automatico
+Dodge, Challenger,  2015, 35000, 2, Azul, automatico
+BMW, Serie 5,  2017, 80000, 4, Negro, automatico
+Dodge, Challenger,  2017, 40000, 4, Blanco, automatico
+Mercedes Benz, Clase C,  2018, 40000, 4, Blanco, automatico
+BMW, Serie 3,  2018, 50000, 4, Blanco, automatico
+Audi, A4,  2016, 30000, 4, Azul, automatico
+Motos
+Honda, Xr, 2018, 200, 6000, Negro
+Suzuki, Gixxer, 2020, 250, 2000, Negro
+Kawasaki, Ninja, 2021, 500, 7000, Negro
+Yamaha, FZ25, 2020, 250, 6000, Negro
+Yamaha, ZR, 2020, 750, 8000, Negro
+Suzuki, Gixxer, 2019, 200, 12000, Negro
+Kawasaki, Vulvan, 2020, 390, 13000, Negro
+Yamaha, FZ35, 2021, 250, 5000, Negro
+Suzuki, Gixxer, 2020, 250, 6000, Negro
+Kawasaki, Vulvan, 2020, 390, 6000, Negro
+Honda, hrv, 2019, 250, 6000, Negro
+Yamaha, FZ35, 2021, 250, 2000, Negro
+Honda, hrv, 2019, 250, 6000, Negro
+Kawasaki, Ninja, 2021, 500, 6000, Negro
+Yamaha, FZ27, 2017, 250, 8000, Negro
+Suzuki, Gixxer 250, 2021, 250, 6000, Negro

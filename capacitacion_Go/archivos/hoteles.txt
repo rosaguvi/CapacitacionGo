@@ -1,0 +1,14 @@
+Hotel;1;hotel del comercio;0 
+Habitacion;1;1-1;Vacia;1254;1 
+Habitacion;1;1-2;Vacia;7854;1 
+Habitacion;1;1-3;Vacia;7854;1 
+Habitacion;1;2-1;Vacia;785;2 
+Habitacion;1;2-2;Vacia;4587;2 
+Habitacion;1;2-3;Vacia;4521;2 
+Hotel;2;Hotel Centauro;0 
+Habitacion;2;1-1;Vacia;7854;1 
+Habitacion;2;1-2;Vacia;5698;1 
+Habitacion;2;1-3;Vacia;4521;1 
+Habitacion;2;2-1;Vacia;1254;2 
+Habitacion;2;2-2;Vacia;1254;2 
+Habitacion;2;2-3;Vacia;2365;2 

@@ -1,0 +1,5 @@
+Lassie, perro, 33, 43
+Pancho, gato, 42, 18
+Sebastián, conejo, 15, 14
+Tony, perro, 52, 13
+Rebeca, loro, 90, 2 
