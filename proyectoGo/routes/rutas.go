@@ -12,7 +12,5 @@ func RegisterRoutes() *mux.Router {
 	registrarRutasUsuario()
 	registrarRutasPerfil()
 	registrarRutasModulo()
-	// registerCommentsRoutes()
-	// registerSocketRoutes()
 	return router
 }

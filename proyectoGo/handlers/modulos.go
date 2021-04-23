@@ -11,6 +11,12 @@ import (
 	"adminModPerl/services"
 )
 
+/**
+* Metodo que lista uno o varios modulos dependiendo de los permisos del usuario y los parametros
+* @param http.ResponseWriter
+* @param *http.Request
+* @return arreglo de Modulos
+**/
 func ListarModulos(w http.ResponseWriter, r *http.Request) {
 	status := http.StatusOK
 	vars := mux.Vars(r)
@@ -29,6 +35,13 @@ func ListarModulos(w http.ResponseWriter, r *http.Request) {
 	}
 	response.Json(listModulos, status, w)
 }
+
+/**
+* Metodo que extrae el objeto Modulo y loenvia al service para ser creado en la base de datos
+* @param http.ResponseWriter
+* @param *http.Request
+* @return objeto Modulo
+**/
 func CrearModulo(w http.ResponseWriter, r *http.Request) {
 	var body models.Modulo
 	err, permisos := ConsultarUsuarioPerfil(r)
@@ -50,6 +63,12 @@ func CrearModulo(w http.ResponseWriter, r *http.Request) {
 	response.Json(modulo, http.StatusOK, w)
 }
 
+/**
+* Metodo que extrae el objeto Modulo y lo envia al service para ser actualizado en la base de datos
+* @param http.ResponseWriter
+* @param *http.Request
+* @return objeto Modulo
+**/
 func ActualizarModulo(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	var body models.Modulo
@@ -70,6 +89,14 @@ func ActualizarModulo(w http.ResponseWriter, r *http.Request) {
 	}
 	response.Json(Modulo, http.StatusOK, w)
 }
+
+/**
+* Metodo que extrae la variables que debe incluir el id Modulo y lo envia al service para validar permisos del usuario
+* y eliminar el registro de la base de datos
+* @param http.ResponseWriter
+* @param *http.Request
+* @return http.ResponseWriter
+**/
 func EliminarModulo(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	err, permisos := ConsultarUsuarioPerfil(r)

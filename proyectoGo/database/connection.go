@@ -38,12 +38,18 @@ func Migrate() {
 	_ = GetConn()
 	db.AutoMigrate(&models.Usuario{}, &models.Modulo{}, &models.Perfil{}, &models.Rol{})
 }
+
+/**
+* Metodo que inicializa los registros requeridos para el funcionamiento del aplicactivo
+* @param null
+* @return null
+ */
 func Inicializar() {
 	rol := models.Rol{Name: "SUPER_ADMIN"}
 	_, rol = CrearRol(rol)
 	rol = models.Rol{Name: "ADMIN"}
 	_, rol = CrearRol(rol)
-	rol = models.Rol{Name: "SUPER_ADMIN"}
+	rol = models.Rol{Name: "USER"}
 	_, rol = CrearRol(rol)
 
 	perfil := models.Perfil{Name: "Jefe de Sistemas"}

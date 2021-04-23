@@ -9,6 +9,8 @@ func GetUsuarios() (listaUsuarios []models.Usuario) {
 	db.Preload("Perfil").Preload("Rol").Find(&listaUsuarios)
 	return
 }
+
+// Retorna el listado de Usuarios creados por un usuario
 func GetUsuariosUsu(id_gra uint) (listaUsuarios []models.Usuario) {
 	_ = GetConn()
 	db.Preload("Perfil").Preload("Rol").Where("usuario_gb = ? ", id_gra).Find(&listaUsuarios)
@@ -30,6 +32,7 @@ func GetUsuario(id uint) (usuario models.Usuario) {
 	db.Preload("Perfil").Preload("Rol").Find(&usuario, id)
 	return
 }
+
 func GetUsuarioUsu(id, id_gra uint) (usuario models.Usuario) {
 	_ = GetConn()
 	db.Preload("Perfil").Preload("Rol").Where("usuario_gb = ? ", id_gra).Find(&usuario, id)

@@ -9,6 +9,8 @@ func GetModulos() (listaModulos []models.Modulo) {
 	db.Preload("Perfil").Find(&listaModulos)
 	return
 }
+
+// Retorna el listado de Modulos creados por un usuario
 func GetModulosUsu(id_gra uint) (listaModulos []models.Modulo) {
 	_ = GetConn()
 	db.Preload("Perfil").Where("usuario_gb = ? ", id_gra).Find(&listaModulos)

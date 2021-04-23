@@ -9,6 +9,14 @@ import (
 	"adminModPerl/jwt"
 )
 
+/**
+* Metodo que valida si el token enviado en la cabecera es correcto
+* para autorizar el ingreso a la aplicacion
+* @param http.ResponseWriter
+* @param *http.Request
+* @return http.ResponseWriter
+* @return *http.Request
+**/
 func Autenticar(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		header := r.Header.Get("Authorization")
@@ -22,15 +30,23 @@ func Autenticar(next http.HandlerFunc) http.HandlerFunc {
 	}
 }
 
+/**
+* Metodo que valida si el usuario esta autorizado a usar el programa que esta consultando
+* y autorizar el acceso al mismo
+* @param http.ResponseWriter
+* @param *http.Request
+* @return http.ResponseWriter
+* @return *http.Request
+**/
 func ValidarPerfil(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		modulo := strings.Split(r.URL.Path[1:], "/")
 		header := r.Header.Get("Authorization")
+		// obtiene los datos de logueo del usuario desde el token
 		claims, _ := jwt.ProcessToken(header)
-		//log.Println("perfil", claims.Perfil)
-		//log.Println("Modulo", modulo)
+		//busca el perfil del usuario y ademas consulta el modulo solicitado en la direccion.
 		perfilUsuario := database.GetPerfilModulo(claims.Perfil, modulo[0])
-		//log.Println("perfil", perfilUsuario)
+		// valaida si el modulo que se desea acceder esta en el perfil del usuario.
 		if len(perfilUsuario.Modulos) <= 0 {
 			w.WriteHeader(http.StatusUnauthorized)
 			err := errors.New("Usuario no Autorizado para este modulo...")

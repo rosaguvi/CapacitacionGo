@@ -12,6 +12,12 @@ import (
 	"adminModPerl/models"
 )
 
+/**
+* Metodo que valida si el usuario y contraseña son correctos y genera el Token para el usuario
+* @param http.ResponseWriter
+* @param *http.Request
+* @return http.ResponseWriter con un objeto que contine los datos del usuario y el token
+**/
 func Login(w http.ResponseWriter, r *http.Request) {
 	var body models.Usuario
 	err := request.Json(r, &body)
