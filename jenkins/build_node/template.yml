@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+
+Resources:
+  nodejstest:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: "minuevonombre" 
+      Handler: index.get
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::397748689898:role/lambdafull
+      Events:
+        GetEvent:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get

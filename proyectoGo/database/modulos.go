@@ -6,14 +6,14 @@ import (
 
 func GetModulos() (listaModulos []models.Modulo) {
 	_ = GetConn()
-	db.Preload("Perfil").Find(&listaModulos)
+	db.Find(&listaModulos)
 	return
 }
 
 // Retorna el listado de Modulos creados por un usuario
 func GetModulosUsu(id_gra uint) (listaModulos []models.Modulo) {
 	_ = GetConn()
-	db.Preload("Perfil").Where("usuario_gb = ? ", id_gra).Find(&listaModulos)
+	db.Where("usuario_gb = ? ", id_gra).Find(&listaModulos)
 	return
 }
 
@@ -29,7 +29,7 @@ func CrearModulo(moduloini models.Modulo) (error, models.Modulo) {
 
 func GetModulo(id uint) (modulo models.Modulo) {
 	_ = GetConn()
-	db.Preload("Perfil").Preload("Rol").Find(&modulo, id)
+	db.Preload("Rol").Find(&modulo, id)
 	return
 }
 func GetModuloNombre(nombre string) (modulo models.Modulo) {
@@ -39,7 +39,7 @@ func GetModuloNombre(nombre string) (modulo models.Modulo) {
 }
 func GetModuloUsu(id, id_gra uint) (modulo models.Modulo) {
 	_ = GetConn()
-	db.Preload("Perfil").Preload("Rol").Where("usuario_gb = ? ", id_gra).Find(&modulo, id)
+	db.Preload("Rol").Where("usuario_gb = ? ", id_gra).Find(&modulo, id)
 	return
 }
 

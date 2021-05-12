@@ -1,6 +1,6 @@
-Feature: Aplicar una vacuna a una mascota
+Feature: crear usuario
 
-  Scenario: aplicar la vacuna de forma extosa
+  Scenario: crear un usuario de forma exitosa
     Given el listado de mascotas tiene 3 mascotas
     And  el listado de vacunas tiene 2 vacunas
     When existe la mascota y la vacuna en el listado de mascotas y vacunas
